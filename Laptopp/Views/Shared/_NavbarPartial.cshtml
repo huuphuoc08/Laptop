@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Laptopp.Models.THUONGHIEU>
+<nav class="navbar bg-danger">
+<div class="container">
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+<div class="collapse navbar-collapse" id="navbar1">
+    <ul class="nav navbar-nav">
+        <li><a class="navbar-brand" href="~/Home/Login">LAPTOP</a></li>
+        <li class="active"><a href="~/Laptop/">TRANG CHỦ</a> </li>
+        <li><a href="~/Laptop/GioiThieu">GIỚI THIỆU</a> </li>
+        <li><a href="https://www.facebook.com/huu.phuoc.505523">LIÊN HỆ</a> </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" style="text-align: right">
+        @Html.Action("LoginLogout", "Laptop")
+        @Html.Action("GioHangPartial", "GioHang")
+    </ul>
+    <div class="header-bottom-right">
+        @using (Html.BeginForm("Search", "Search", FormMethod.Get, new { @class = "navbar-form navbar-right", @role = "search" }))
+        {
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Tìm kiếm" name="strSearch">
+            </div>
+            <button type="submit" class="btn btn-default">Tìm</button>
+        }
+    </div>
+</div>
+    </div>
+</nav> 

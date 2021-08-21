@@ -1,0 +1,148 @@
+﻿.imglap {
+    transition: all 1s ease-in;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.imglap {
+    max-width: 100%;
+    height: auto;
+}
+
+    .imglap:hover {
+        transform: scale(0.9);
+        cursor: pointer;
+    }
+
+.imglapbannhieu {
+    width: 100px;
+}
+
+.section-sp {
+    border-bottom: 3px solid #74a7d3;
+    border-right: 3px solid #74a7d3;
+    border-left: 3px solid #74a7d3;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.border-opinion {
+    border-bottom: 3px solid #74a7d3;
+    border-left: 3px solid #74a7d3;
+}
+
+.image-review {
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 2px #ccc;
+    height: 70px;
+    margin: 1px 0 8px;
+    object-fit: scale-down;
+    padding: 4px;
+    transform: scale(1);
+    width: 70px;
+    transition-duration: .4s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.form-group .form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.form-group .form-control {
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    padding: .375rem .75rem;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    margin: 0;
+}
+
+.form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+textarea {
+    height: 500px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.btn-blues {
+    color: red;
+    border-color: red;
+    background-color: white;
+}
+
+    .btn-blues:hover {
+        color: white;
+        background-color: red;
+    }
+
+
+.addtocart, .giaban, .ngaycapnhat {
+    padding-left: 450px;
+}
+
+.motalap {
+    padding-top: 40px;
+}
+
+
+.aa {
+    height: 40px;
+    background-image: linear-gradient(blue,white);
+    margin-bottom: 40px;
+}
+
+.bb {
+    width: 300px;
+    height: 300px;
+}
+
+
+.btn-buy {
+    color: green;
+    border-color: green;
+}
+
+    .btn-buy:hover {
+        background-color: green;
+        color: white;
+    }

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Laptopp.Models.LAP>
+<hr>
+<div class="container">
+    <div class="row">
+        @foreach (var lap in Model)
+        {
+            <div class="col-lg-6 col-md-6">
+                <hr />
+                <div class="media-object-default">
+                    <div class="media">
+                        <div class="media-left"> <a href="#"> <img class="media-object imglapbannhieu" src="~/Images/@lap.AnhBia" alt="placeholder image"> </a> </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href="@Url.Action("ChiTietLap","Laptop",new {id = lap.MaLap })">@lap.TenLap</a>
+                            </h4>
+                            <h6>
+                                <p new id=lap.MaLap style="display: -webkit-box;
+                            max-height: 4.8rem;
+                           -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            -webkit-line-clamp: 3;
+                            line-height: 1.6rem;">@lap.MoTa</p>
+
+                        </h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+    </div>
+</div>

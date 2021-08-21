@@ -1,0 +1,42 @@
+﻿@using Laptopp.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<LAP>
+@{
+    ViewBag.Title = "Laptop theo thương hiệu";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+    <h2 class="text-center">Laptop theo thương hiệu</h2>
+<hr>
+<div class="row text-center">
+    @foreach (var lap in Model)
+    {
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+            <div class="thumbnail">
+                <img src="~/Images/@lap.AnhBia" alt="Thumbnail Image 1" class="img-responsive img-rounded imgbook " style="width:auto;">
+                <div class="media-body">
+                    <h4 style=" min-height:40px;">
+                        <a href="@Url.Action("ChiTietLap","Laptop",new {id = lap.MaLap })">@lap.TenLap</a>
+                    </h4>
+                    <h4 style="color:orangered"> <span>@Html.FormatValue(lap.GiaBan, "{0:#,##0}").000₫</span></h4>
+                    <p>
+                        <a href="@Url.Action("ThemGioHang", "GioHang", new { ml = lap.MaLap, url = Request.Url.ToString()})" class="btn btn-primary" role="button">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Thêm vào giỏ hàng
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@*Tạo liên kết chân trang*@
+    Trang@(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
+    <div class="MenuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("LapTheoThuongHieu", new { iMaTH = ViewBag.MaTH, page = page }))
+    </div>
+    <style>
+        .MenuTrang {
+            display: inline;
+            text-align: center;
+        }
+    </style>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Laptopp.Models.LAP>
+@{
+    ViewBag.Title = "TRANG CHỦ";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+
+@using Laptopp.Models;
+
+<h2 class="text-center">LAPTOP MỚI CẬP NHẬT</h2>
+<hr>
+
+<div class="row text-center">
+    @{ int i = 0;}
+    @foreach (var lap in Model)
+    {
+        i++;
+        if (i % 3 == 0)
+        {
+            @:<div class="col-sm-4 col-md-4 col-lg-4 col-xs-6 hidden-xs">
+
+        }
+        else
+        {
+                @:<div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+                }
+                <div class="thumbnail">
+                    <img src="~/Images/@lap.AnhBia" alt="Thumbnail Image 1" class="img-responsive img-rounded imgbook " style="width:auto;">
+                    <div class="media-body">
+                        <h4 style=" min-height:40px;">
+                            <a href="@Url.Action("ChiTietLap", "Laptop", new { id = lap.MaLap })">@lap.TenLap</a>                         
+                        </h4>
+                        <h4 style="color:orangered"> <span>@Html.FormatValue(lap.GiaBan, "{0:#,##0}").000₫</span></h4>
+                        <p>
+                            <a href="@Url.Action("ThemGioHang", "GioHang", new { ml = lap.MaLap, url = Request.Url.ToString()})" class="btn btn-primary" role="button">
+                                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Thêm vào giỏ hàng
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            @:</div>
+
+
+
+
+        }
+</div>
+</div>
+<nav class="text-center">
+    <ul class="pagination">
+        <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li class="disabled"><a href="#">5</a></li>
+        <li> <a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+    </ul>
+</nav>
+

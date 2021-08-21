@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "ChiTietLap";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+@*<style type="text/css">
+        .addtocart, .giaban, .ngaycapnhat {
+            padding-left: 450px;
+        }
+
+        .motalap {
+            padding-top: 30px;
+        }
+
+        p > span {
+            font-size: 20px;
+            color: blue;
+            #808080
+        }
+
+        .aa {
+            height: 40px;
+            background-image: linear-gradient(blue,white);
+            margin-bottom: 40px;
+        }
+
+        .bb {
+            width: 300px;
+            height: 300px;
+            box-shadow: 10px 10px 5px 5px #808080;
+        }
+
+        .tenlap {
+            padding-top: 3px;
+        }
+    </style>
+    <div class="thumbnail">
+        <div class="aa">
+            <p class="tenlap">
+                <h4 style="color:red; text-align:center;">@Model.TenLap</h4>
+            </p>
+        </div>
+        <img class="bb" src="~/Images/@Model.AnhBia" alt="@Model.TenLap" />
+        <div class="motalap">
+            <p>
+                @Html.Raw(Model.MoTa.ToString().Replace("\n", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+            </p>
+        </div>
+        <p class="ngaycapnhat">Ngày Cập Nhật:@Html.FormatValue(@Model.NgayCapNhat, "{0:dd/MM/yyyy}")</p>
+        <p class="giaban">Giá Bán:<span>@Html.FormatValue(@Model.GiaBan, "{0:#,##0}")VNĐ</span></p>
+        <p class="addtocart">
+            <a href="@Url.Action("ThemGioHang", "GioHang", new { ml = Model.MaLap, url = Request.Url.ToString()})" new {id=@Model.MaLap } class="btn btn-primary" role="button">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">Thêm vào giỏ hàng</span>
+            </a>
+        </p>
+    </div>*@
+@model Laptopp.Models.LAP
+@{
+    ViewBag.Title = "ChiTietLap";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    <link href="~/Css/StyleSheet1.css" rel="stylesheet" />
+}
+
+
+
+<div class="container">
+    <div class="row px-5">
+        <div class="col-md-4 ">
+            <div class="img-sp imglap">
+                <img class="bb" style="width:300px; height:200px" src="~/Images/@Model.AnhBia" alt="@Model.TenLap">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <div>
+                    <h4 style="color:red;">@Model.TenLap</h4>
+
+                </div>
+                <span style="font-weight:bold" class="glyphicon glyphicon-thumbs-up" />Tình trạng: <span style="color:forestgreen">Còn hàng</span>
+                <div class="motalap py-2">
+                    <p>
+                        @Html.Raw(Model.MoTa.ToString().Replace("\n", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+                    </p>
+                </div>
+                <div>
+                    <p><span style="font-weight:bold">Ngày Cập Nhật: </span>@Html.FormatValue(@Model.NgayCapNhat, "{0:dd/MM/yyyy}")</p>
+                    <p><span style="font-weight:bold">Giá Bán: </span><h4 style="color:orangered"><span>@Html.FormatValue(@Model.GiaBan, "{0:#,##0}").000₫</span></h4></p>
+                    <p class="text-center">
+                        <a href="@Url.Action("ThemGioHang", "GioHang", new { ml = Model.MaLap, url = Request.Url.ToString()})" new {id=@Model.MaLap } class="btn btn-success" role="button">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">   Thêm vào giỏ hàng</span>
+                        </a>
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

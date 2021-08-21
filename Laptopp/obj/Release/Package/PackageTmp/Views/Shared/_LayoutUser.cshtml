@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    @Scripts.Render("~/Scripts/js")
+    @Styles.Render("~/Content/css")
+
+    <style type="text/css">
+        .imgbook {
+            transition: all 1s ease-in;
+            width: 400px;
+        }
+            .imgbook:hover {
+                transform: scale(0.9);
+                cursor: pointer;
+            }
+        .imglapbannhieu {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    @Html.Action("_NavbarPartial", "Laptop")
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="carousel1" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel1" data-slide-to="0" class="active"> </li>
+                        <li data-target="#carousel1" data-slide-to="1" class=""> </li>
+                        <li data-target="#carousel1" data-slide-to="2" class=""> </li>
+                        <li data-target="#carousel1" data-slide-to="3" class=""> </li>
+                        <li data-target="#carousel1" data-slide-to="4" class=""> </li>
+                        <li data-target="#carousel1" data-slide-to="5" class=""> </li>
+                    </ol>
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <img class="img-responsive" src="~/Images/Slider/01.jpg" alt="thumb">
+                            <div class="carousel-caption"> Quảng cáo 1 </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="~/Images/Slider/02.jpg" alt="thumb">
+                            <div class="carousel-caption"> Quảng cáo 2 </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="~/Images/Slider/03.jpg" alt="thumb">
+                            <div class="carousel-caption"> Quảng cáo 3 </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="~/Images/Slider/04.jpg" alt="thumb">
+                            <div class="carousel-caption"> Quảng cáo 4 </div>
+                        </div>
+
+                    </div>
+                    <a class="left carousel-control" href="#carousel1" data-slide="prev"><span class="icon-prev"></span></a> <a class="right carousel-control" href="#carousel1" data-slide="next"><span class="icon-next"></span></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+                    @Html.Action("ThuongHieuPartial", "Laptop")
+                    <br>
+
+                    @*@Html.Action("PhuKienPartial", "Laptop")*@
+
+
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    @RenderBody()
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+
+        <h2 class="text-center">LAPTOP BÁN NHIỀU</h2>
+        @Html.Action("LapBanNhieuPartial", "Laptop")
+    </div>
+
+
+
+    <h2 class="text-center">TIN CÔNG NGHỆ</h2>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 col-md-6">
+
+                <div class="media-object-default">
+                    <div class="media">
+                        <div class="media-left"> <a href="https://vnexpress.net/synnex-fpt-phan-phoi-notebook-msi-4328160.html"> <img src="https://i1-sohoa.vnecdn.net/2021/07/21/Image-ExtractWord-0-Out-2165-1626861891.png?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=WJ34Xnl5vKrGO3bZ3jDakQ" data-src="https://i1-sohoa.vnecdn.net/2021/07/21/Image-ExtractWord-0-Out-2165-1626861891.png?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=WJ34Xnl5vKrGO3bZ3jDakQ"> </a> </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href=" ">Synnex FPT phân phối Notebook MSI</a>
+                            </h4>
+                            <h6>
+                                <p new id=lap.MaLap style="display: -webkit-box;
+                            max-height: 4.8rem;
+                           -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            -webkit-line-clamp: 3;
+                            line-height: 1.6rem;">Synnex FPT ký kết với MSI, trở thành nhà phân phối máy tính xách tay của hãng này tại Việt Nam kể từ tháng 7.</p>
+
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left"> <a href="https://vnexpress.net/laptop-gaming-dung-card-rtx-3080-gia-80-trieu-dong-4326424.html"> <img src="https://i1-sohoa.vnecdn.net/2021/07/20/lenovo-legion-7-vnexpress-dsc09522-1626640492-1626727479.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=i6oyy9GGeU_q_n0WaC8wYQ" data-src="https://i1-sohoa.vnecdn.net/2021/07/20/lenovo-legion-7-vnexpress-dsc09522-1626640492-1626727479.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=i6oyy9GGeU_q_n0WaC8wYQ"> </a> </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href=" ">Laptop gaming dùng card RTX 3080, giá 80 triệu đồng</a>
+                            </h4>
+                            <h6>
+                                <p new id=lap.MaLap style="display: -webkit-box;
+                            max-height: 4.8rem;
+                           -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            -webkit-line-clamp: 3;
+                            line-height: 1.6rem;">Legion 7 phiên bản cao cấp nhất tại Việt Nam có giá 80 triệu đồng, được trang bị chip Ryzen 9 và card đồ họa RTX 3080.</p>
+
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left"> <a href="https://vnexpress.net/man-hinh-27-inch-4k-dung-cong-usb-c-gia-12-trieu-dong-4327324.html"> <img src="https://i1-sohoa.vnecdn.net/2021/07/20/DSCF0079-1626714773.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=E9Qn9R49JHmUuWrSvEEZ3w" data-src="https://i1-sohoa.vnecdn.net/2021/07/20/DSCF0079-1626714773.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=E9Qn9R49JHmUuWrSvEEZ3w"> </a> </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href=" ">Màn hình 27 inch 4K dùng cổng USB-C giá 12 triệu đồng</a>
+                            </h4>
+                            <h6>
+                                <p new id=lap.MaLap style="display: -webkit-box;
+                            max-height: 4.8rem;
+                           -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            -webkit-line-clamp: 3;
+                            line-height: 1.6rem;">LG 27UP850-W là màn hình 4K hỗ trợ kết nối hình ảnh và dữ liệu qua USB-C với giá rẻ nhất hiện nay.</p>
+
+                            </h6>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h4 style="text-align:center"><a href="#boxnoidung" aria-expanded="false" data-toggle="collapse">Xem thêm</a></h4>
+
+    <div class="collapse mt-6" id="boxnoidung">
+        <div class="container">
+
+            <div class="col-lg-8 col-md-6">
+
+                <div class="media-object-default">
+                    <div class="media">
+                        <div class="media-left"> <a href="https://vnexpress.net/smartwatch-cao-cap-nhat-cua-huawei-gia-12-99-trieu-dong-4328114.html"> <img src="https://i1-sohoa.vnecdn.net/2021/07/21/DSC3233.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=2jcqDu1A4C4fCEDTCnQivw" data-src="https://i1-sohoa.vnecdn.net/2021/07/21/DSC3233.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=2jcqDu1A4C4fCEDTCnQivw"> </a> </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href=".">Smartwatch cao cấp nhất của Huawei giá 12,99 triệu đồng</a>
+                            </h4>
+                            <h6>
+                                <p new id=lap.MaLap style="display: -webkit-box;
+                            max-height: 4.8rem;
+                           -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            -webkit-line-clamp: 3;
+                            line-height: 1.6rem;">Smartwatch cao cấp nhất của Huawei có thân bằng titanium, hỗ trợ eSim, GPS băng tần kép, cùng núm xoay giống Apple Watch.</p>
+
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left"> <a href="https://vnexpress.net/mo-hop-oppo-reno6-z-gia-9-49-trieu-dong-4328538.html"> <img src="https://i1-sohoa.vnecdn.net/2021/07/22/DSC3592-1626890028.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=PCqc_AQtGVltjhF_Eexmsw" data-src="https://i1-sohoa.vnecdn.net/2021/07/22/DSC3592-1626890028.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=PCqc_AQtGVltjhF_Eexmsw"> </a> </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href="https://vnexpress.net/mo-hop-oppo-reno6-z-gia-9-49-trieu-dong-4328538.html">Mở hộp Oppo Reno6 Z giá 9,49 triệu đồng</a>
+                            </h4>
+                            <h6>
+                                <p new id=lap.MaLap style="display: -webkit-box;
+                            max-height: 4.8rem;
+                           -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            -webkit-line-clamp: 3;
+                            line-height: 1.6rem;">Reno6 Z được trang bị chip MediaTek Dimensity 800U 5G, camera 64 chấm và sạc nhanh 30W.</p>
+
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left"> <a href="https://vnexpress.net/dich-vu-be-khoa-esim-cho-iphone-khoa-mang-no-ro-4327580.html"> <img src="https://i1-sohoa.vnecdn.net/2021/07/21/1901477-1626801642-3148-1626801812.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=9axbujkQkJIeudjrEW5ZjQ" data-src="https://i1-sohoa.vnecdn.net/2021/07/21/1901477-1626801642-3148-1626801812.jpg?w=220&amp;h=132&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=9axbujkQkJIeudjrEW5ZjQ"> </a> </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href="https://vnexpress.net/dich-vu-be-khoa-esim-cho-iphone-khoa-mang-no-ro-4327580.html">Dịch vụ 'bẻ khóa' esim cho iPhone khóa mạng nở rộ</a>
+                            </h4>
+                            <h6>
+                                <p new id=lap.MaLap style="display: -webkit-box;
+                            max-height: 4.8rem;
+                           -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            -webkit-line-clamp: 3;
+                            line-height: 1.6rem;">Nhiều cửa hàng sửa chữa iPhone hiện cung cấp dịch vụ "bẻ khóa" esim cho các mẫu iPhone "lock" với giá từ 350.000 đồng.</p>
+
+                            </h6>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <section class="footer bg-danger  ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="address">
+                        <h5>THÔNG TIN</h5>
+                        <div class="footer-content py-1">
+                            <ul class="info">
+                                <li>Vương Đức Hữu Phước</li>
+                                <li>1924801040005</li>
+                                <li>Webite được dùng cho đồ án kết thúc học phần môn lập trình web</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>HƯỚNG DẪN</h5>
+                    <div class="footer-hd">
+                        <ul class="hd-info">
+                            <li>Chat với nhân viên hỗ trợ</li>
+                            <li>Báo cáo sự cố</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>CHÍNH SÁCH</h5>
+                    <div class="footer-CS">
+                        <ul class="CS-info">
+                            <li>Đổi trả và hoàn tiền</li>
+                            <li>Chính sách bảo hành</li>
+                            <li>Giao hàng tận nhà</li>
+                            <li>Chính sách trả góp</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>LIÊN HỆ:</h5>
+                    <div class="footer-CS">
+                        <ul class="CS-info">
+                            <li>Địa chỉ: Thuận An, Bình Dương <a href="@Url.Action("GioiThieu","Laptop")"><p class="glyphicon glyphicon-map-marker">Bản đồ</p></a></li>
+                            <li>Email hỗ trợ: <a href="mailto:1924801040005@student.tdmu.edu.vn" }="">1924801040005@student.tdmu.edu.vn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
+
+

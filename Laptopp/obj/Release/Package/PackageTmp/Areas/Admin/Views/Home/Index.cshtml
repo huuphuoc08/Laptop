@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "ADMIN";
+    //Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    Layout = null;
+}
+
+<div class="text-center">CHÀO MỪNG BẠN ĐẾN VỚI TRANG ADMIN!!!</div>
+<div class="container text-center">
+<table>
+    <tr>
+        <td><a class="navbar-brand" href="@Url.Action("Index","Lap")">*Quản Lý Sản Phẩm</a></td>
+    </tr>
+    <tr>
+        <td><a class="navbar-brand" href="@Url.Action("Index","ThuongHieu")">*Quản Lý Thương Hiệu</a></td>
+    </tr>
+    <tr>
+        <td><a class="navbar-brand" href="@Url.Action("Index","KhachHang")">*Quản Lý Khách Hàng</a></td>
+    </tr>
+    <tr>
+        <td><a class="navbar-brand" href="@Url.Action("Index","DonHang")">*Quản Lý Đơn Hàng</a></td>
+    </tr>
+</table>
+</div>
